@@ -1,0 +1,25 @@
+<%= form_for @identification, :url => identifications_path, :html => { :multipart => true } do |f| %>
+  <% if @identification.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@identification.errors.count, "error") %> prohibited this identification from being saved:</h2>
+
+      <ul>
+      <% @identification.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <%= f.file_field :driver %>
+
+
+  <div class="field">
+    <%= f.label :license_number %><br>
+    <%= @identification.license_number || "NOT AVAILABLE"%>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

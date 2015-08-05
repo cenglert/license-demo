@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+
+
+<p>
+  <strong>License number:</strong>
+  <%= @identification.license_number %>
+</p>
+<p>
+	<%= image_tag @identification.driver.url(:thumb) %>
+</p>
+<%= link_to 'Edit', edit_identification_path(@identification) %> |
+<%= link_to 'Back', identifications_path %>
