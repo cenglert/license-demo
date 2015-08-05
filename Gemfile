@@ -29,7 +29,7 @@ gem 'searchkick'
 gem 'rtesseract'
 gem 'rmagick'
 gem 'tesseract-ocr'
-
+gem 'therubyracer'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
